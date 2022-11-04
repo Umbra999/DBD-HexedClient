@@ -1,0 +1,41 @@
+﻿  GUI.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Core\GUI.cpp(136,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Handler.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Core\Handler.cpp(27,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  InternalSettings.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Core\InternalSettings.cpp(4,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  CosmeticUnlocker.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Core\Modules\CosmeticUnlocker.cpp(13,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Patching.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Core\Patching.cpp(41,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  dllmain.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\dllmain.cpp(34,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  imgui.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui.cpp(2022,1): warning C4005: "va_copy": Makro-Neudefinition
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui.cpp(2020): message : Siehe vorherige Definition von "va_copy"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui.cpp(10107,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  imgui_demo.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_demo.cpp(104,1): warning C4005: "IM_NEWLINE": Makro-Neudefinition
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_demo.cpp(102): message : Siehe vorherige Definition von "IM_NEWLINE"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_demo.cpp(4845,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  imgui_draw.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_draw.cpp(126,10): error C2006: "#include": FILENAME oder <FILENAME> erwartet.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_draw.cpp(149,10): error C2006: "#include": FILENAME oder <FILENAME> erwartet.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_draw.cpp(3406,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  imgui_impl_dx11.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_impl_dx11.cpp(545,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  imgui_impl_win32.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_impl_win32.cpp(326,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  imgui_widgets.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\imgui\imgui_widgets.cpp(7631,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  kiero.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\kiero\kiero.cpp(40,1): warning C4005: "KIERO_TEXT": Makro-Neudefinition
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\kiero\kiero.cpp(38): message : Siehe vorherige Definition von "KIERO_TEXT"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\kiero\kiero.cpp(693,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Engine.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.cpp(336,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Logger.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Wrapper\Logger.cpp(63,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Utils.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\Wrapper\Utils.cpp(50,1): fatal  error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Code wird generiert...

@@ -98,6 +98,8 @@ UObject* AEscapeDoorClass;
 UObject* HookClass;
 UObject* ASearchableClass;
 UObject* ATotemClass;
+UObject* AHatchClass;
+
 
 uintptr_t GetBoneMatrixF;
 uintptr_t GetDebugCosmetics;
@@ -296,7 +298,7 @@ bool EngineInit()
 	static byte debugCosmeticsSig[] = { 0x48, 0x8B, 0x05, 0x00, 0x00 ,0x00 ,0x00, 0x83 ,0x38, 0x00, 0x75, 0x31 };
 	GetDebugCosmetics = reinterpret_cast<decltype(GetDebugCosmetics)>(Utils::FindPointer(main, debugCosmeticsSig, sizeof(debugCosmeticsSig), 0));
 	if (!GetDebugCosmetics) return false;
-	
+
 	// Functions & Class Finding
 
 	WorldToScreenUFunc = ObjObjects->FindObject("Function Engine.PlayerController.ProjectWorldLocationToScreen");
@@ -330,6 +332,8 @@ bool EngineInit()
 	ASearchableClass = ObjObjects->FindObject("Class DeadByDaylight.Searchable");
 
 	ATotemClass = ObjObjects->FindObject("Class DeadByDaylight.Totem");
+
+	AHatchClass = ObjObjects->FindObject("Class DeadByDaylight.Hatch");
 
 	return true;
 }

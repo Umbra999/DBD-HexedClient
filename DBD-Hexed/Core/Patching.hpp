@@ -3,6 +3,7 @@
 class Patching
 {
 private:
+	static void PatchPostRenderer();
 
 public:
 	static void ApplyPatches();

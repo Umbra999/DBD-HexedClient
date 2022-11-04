@@ -148,6 +148,7 @@
     <ClInclude Include="Core\Handler.hpp" />
     <ClInclude Include="Core\InternalSettings.hpp" />
     <ClInclude Include="Core\Modules\CosmeticUnlocker.hpp" />
+    <ClInclude Include="Core\Modules\ESP.hpp" />
     <ClInclude Include="Core\Patching.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="imgui\imconfig.h" />
@@ -177,6 +178,7 @@
     <ClCompile Include="Core\Handler.cpp" />
     <ClCompile Include="Core\InternalSettings.cpp" />
     <ClCompile Include="Core\Modules\CosmeticUnlocker.cpp" />
+    <ClCompile Include="Core\Modules\ESP.cpp" />
     <ClCompile Include="Core\Patching.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="imgui\imgui.cpp" />

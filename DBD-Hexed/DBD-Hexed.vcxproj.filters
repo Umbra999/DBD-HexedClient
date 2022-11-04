@@ -117,6 +117,9 @@
     <ClInclude Include="Core\Modules\CosmeticUnlocker.hpp">
       <Filter>Core\Modules</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Modules\ESP.hpp">
+      <Filter>Core\Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -180,6 +183,9 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\Modules\CosmeticUnlocker.cpp">
+      <Filter>Core\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Modules\ESP.cpp">
       <Filter>Core\Modules</Filter>
     </ClCompile>
   </ItemGroup>

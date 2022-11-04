@@ -1,11 +1,11 @@
 #pragma once
+#include "../SDK/Engine.hpp"
 
 class Handler
 {
 private:
-	static void OnUpdate();
-	static void InitModules();
 
 public:
-	static void SDKInit();
+	static void InitModules();
+	static void OnRender(UGameViewportClient*, Canvas*);
 };

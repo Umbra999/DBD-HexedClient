@@ -90,6 +90,22 @@ void GUI::Render()
 	ImGui::NewFrame();
 
 	ImGui::Begin("H E X E D");
+
+	if (ImGui::CollapsingHeader("MOVEMENT"))
+	{
+		
+	}
+
+	if (ImGui::CollapsingHeader("ESP"))
+	{
+		
+	}
+
+	if (ImGui::CollapsingHeader("MISC"))
+	{
+
+	}
+
 	ImGui::End();
 
 	ImGui::Render();

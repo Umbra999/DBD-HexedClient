@@ -1,3 +1,4 @@
+#pragma once
 #include <Windows.h>
 #include <cstdint>
 #include <string>
@@ -277,6 +278,23 @@ struct ATotem : AActor {
 	int8_t _totemState; // 0x378(0x01)
 };
 
+// Class DeadByDaylight.Hatch
+// Size: 0x3e0 (Inherited: 0x328)
+struct AHatch : AActor {
+	char pad_328[0x50]; // 0x328(0x50)
+	//enum class EHatchState _hatchState; // 0x378(0x01)
+	bool _isSurvivorEscaping; // 0x379(0x01)
+	bool _isEndGameOver; // 0x37a(0x01)
+	bool _isForceOpen; // 0x37b(0x01)
+	bool _attemptToCloseHatchOnNextEscape; // 0x37c(0x01)
+	char pad_37D[0xb]; // 0x37d(0x0b)
+	struct UPrimitiveComponent* _baseCollision; // 0x388(0x08)
+	char pad_390[0x18]; // 0x390(0x18)
+	//struct FDBDTunableRowHandle _hatchOpenDuration; // 0x3a8(0x28)
+	char pad_3D0[0x10]; // 0x3d0(0x10)
+
+};
+
 // Class Engine.Level
 struct ULevel {
 	char pad_0000[0xA0]; // 0x00 (0x98)
@@ -392,6 +410,7 @@ extern UObject* AEscapeDoorClass;
 extern UObject* HookClass;
 extern UObject* ASearchableClass;
 extern UObject* ATotemClass;
+extern UObject* AHatchClass;
 extern uintptr_t GetBoneMatrixF;
 extern uintptr_t GetDebugCosmetics;
 extern void(*OPostRender)(UGameViewportClient* UGameViewportClient, Canvas* Canvas);

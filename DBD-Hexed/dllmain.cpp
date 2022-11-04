@@ -15,7 +15,7 @@ void Initialize()
 
     Patching::ApplyPatches();
     GUI::KieroInit();
-    Handler::SDKInit();
+    Handler::InitModules();
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
