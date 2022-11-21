@@ -7,3 +7,6 @@ The code in here is very bad, if you want to start cheating in Dead by Daylight 
 
 Credits:
 Kiero / ImGui: https://github.com/rdbo/ImGui-DirectX-11-Kiero-Hook
+
+Thanks:
+https://github.com/Saya-de for the Help on the Engine
