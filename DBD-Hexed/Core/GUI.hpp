@@ -4,8 +4,9 @@
 class GUI
 {
 private:
+	static HWND currentWindow;
 	static bool IsInitialized;
-	static void Create(HWND);
+	static void Create();
 	static void Render();
 
 	static HRESULT __stdcall OnSwapChain(IDXGISwapChain*, UINT, UINT);
@@ -20,4 +21,5 @@ private:
 public:
 	static bool Enabled;
 	static void KieroInit();
+	static void Delete();
 };

@@ -170,6 +170,7 @@
     <ClInclude Include="minhook\MinHook.h" />
     <ClInclude Include="minhook\trampoline.h" />
     <ClInclude Include="SDK\Engine.hpp" />
+    <ClInclude Include="Wrapper\ClientConsole.hpp" />
     <ClInclude Include="Wrapper\Logger.hpp" />
     <ClInclude Include="Wrapper\Utils.hpp" />
   </ItemGroup>
@@ -194,6 +195,7 @@
     <ClCompile Include="minhook\hook.c" />
     <ClCompile Include="minhook\trampoline.c" />
     <ClCompile Include="SDK\Engine.cpp" />
+    <ClCompile Include="Wrapper\ClientConsole.cpp" />
     <ClCompile Include="Wrapper\Logger.cpp" />
     <ClCompile Include="Wrapper\Utils.cpp" />
   </ItemGroup>

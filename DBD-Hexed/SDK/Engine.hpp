@@ -234,6 +234,8 @@ struct APawn : AActor {
 	int8_t GetPlayerTeam();
 };
 
+
+
 // Class DeadByDaylight.Generator
 struct AGenerator : AActor
 {
@@ -264,34 +266,69 @@ struct ASearchable : AActor {
 	char pad_0000[0x0]; // 0x148 (0x108)
 };
 
+// Class DeadByDaylight.BreakableBase
+// Size: 0x350 (Inherited: 0x328)
+struct ABreakableBase : AActor {
+	char pad_0000[0x0];
+
+	bool IsUnbroken();
+
+};
+
+// Class DeadByDaylight.Collectable
+// Size: 0x4b0 (Inherited: 0x328)
+struct ACollectable : AActor {
+	char pad_0000[0x0];
+
+};
+
+
+// Class DeadByDaylight.Pallet
+// Size: 0x438 (Inherited: 0x328)
+struct APallet : AActor {
+	char pad_0000[0x0]; 
+	
+	bool GetIsPulledDown();
+	bool GetIsDreamPallet();
+	bool IsPulldownBlockedByEntity();
+};
+
 // Class DeadByDaylight.EscapeDoor
 // Size: 0x420 (Inherited: 0x328)
 struct AEscapeDoor : AActor {
 	char pad_0000[0x0]; // 0x148 (0x108)
 };
 
+// Class DeadByDaylight.Window
+// Size: 0x428 (Inherited: 0x328)
+struct AWindow : AActor {
+	char pad_0000[0x0];
+
+};
+
+
 // Class DeadByDaylight.Totem
 // Size: 0x450 (Inherited: 0x328)
 struct ATotem : AActor {
-	char pad_0000[0x220]; // 0x148 (0x108)
-	TArray<void*> bound_perks; // 0x368(0x10)
-	int8_t _totemState; // 0x378(0x01)
+	char pad_0000[0x0];
+
+	int8_t GetTotemState();
+
+};
+
+enum class ETotemState
+{
+	Cleansed = 0,
+	Dull = 1,
+	Hex = 2,
+	Boon = 3,
+	ETotemState_MAX = 4,
 };
 
 // Class DeadByDaylight.Hatch
 // Size: 0x3e0 (Inherited: 0x328)
 struct AHatch : AActor {
-	char pad_328[0x50]; // 0x328(0x50)
-	//enum class EHatchState _hatchState; // 0x378(0x01)
-	bool _isSurvivorEscaping; // 0x379(0x01)
-	bool _isEndGameOver; // 0x37a(0x01)
-	bool _isForceOpen; // 0x37b(0x01)
-	bool _attemptToCloseHatchOnNextEscape; // 0x37c(0x01)
-	char pad_37D[0xb]; // 0x37d(0x0b)
-	struct UPrimitiveComponent* _baseCollision; // 0x388(0x08)
-	char pad_390[0x18]; // 0x390(0x18)
-	//struct FDBDTunableRowHandle _hatchOpenDuration; // 0x3a8(0x28)
-	char pad_3D0[0x10]; // 0x3d0(0x10)
+	char pad_0000[0x0];
 
 };
 
@@ -316,6 +353,21 @@ struct UPlayer {
 	char pad_0001[0x38]; // 0x40 (0x38)
 	class UGameViewportClient* ViewportClient; // 0x78 (0x08)
 };
+
+// Class Engine.Character
+// Size: 0x4d0 (Inherited: 0x290)
+struct ACharacter : APawn {
+	struct USkeletalMeshComponent* Mesh; // 0x290(0x08)
+	struct UCharacterMovementComponent* CharacterMovement; // 0x298(0x08)
+	struct UCapsuleComponent* CapsuleComponent; // 0x2a0(0x08)
+	//struct FBasedMovementInfo BasedMovement; // 0x2a8(0x30)
+	//struct FBasedMovementInfo ReplicatedBasedMovement; // 0x2d8(0x30)
+	float AnimRootMotionTranslationScale; // 0x308(0x04)
+	struct FVector BaseTranslationOffset; // 0x30c(0x0c)
+	char pad_318[0x8]; // 0x318(0x08)
+	//struct FQuat BaseRotationOffset; // 0x320(0x10)	
+};
+
 
 // Class Engine.PlayerState
 struct APlayerState {
@@ -410,12 +462,18 @@ extern UObject* AEscapeDoorClass;
 extern UObject* HookClass;
 extern UObject* ASearchableClass;
 extern UObject* ATotemClass;
+extern UObject* GetTotemStateFunc;
 extern UObject* AHatchClass;
+extern UObject* APalletClass;
+extern UObject* AWindowClass;
+extern UObject* ABreakableClass;
+extern UObject* UnbrokenFunc;
+extern UObject* ACollectableClass;
 extern uintptr_t GetBoneMatrixF;
 extern uintptr_t GetDebugCosmetics;
-extern void(*OPostRender)(UGameViewportClient* UGameViewportClient, Canvas* Canvas);
+extern UObject* IsPulledDownFunc;
+extern UObject* IsBlockedPalletFunc;
+extern UObject* IsDreamPalletFunc;
 
 bool EngineInit();
 FVector2D GetBone(USkeletalMeshComponent* Mesh, INT index, APlayerController* PlayerController);
-void GetAllBoneNames(USkeletalMeshComponent* Mesh);
-int GetBoneIndex(USkeletalMeshComponent* Mesh, BoneFNames Bone);

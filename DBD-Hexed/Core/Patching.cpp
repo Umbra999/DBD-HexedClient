@@ -3,6 +3,7 @@
 #include "../Wrapper/Logger.hpp"
 #include "../Core/Handler.hpp"
 
+void(*OPostRender)(UGameViewportClient* UGameViewportClient, Canvas* Canvas);
 void PatchedPostRender(UGameViewportClient* UGameViewportClient, Canvas* canvas)
 {
 	Handler::OnRender(UGameViewportClient, canvas);
@@ -28,11 +29,7 @@ void Patching::PatchPostRenderer()
 	void** ViewPortClientVTable = ViewPortClient->VFTable;
 	if (!ViewPortClientVTable) return;
 
-	DWORD protecc;
-	VirtualProtect(&ViewPortClientVTable[102], 8, PAGE_EXECUTE_READWRITE, &protecc);
-	OPostRender = reinterpret_cast<decltype(OPostRender)>(ViewPortClientVTable[102]);
-	ViewPortClientVTable[102] = &PatchedPostRender;
-	VirtualProtect(&ViewPortClientVTable[102], 8, protecc, 0);
+	if (MH_CreateHook(ViewPortClientVTable[102], &PatchedPostRender, (void**)(&OPostRender)) != MH_OK) Logger::LogError("Failed to patch Post Renderer");
 }
 
 void Patching::ApplyPatches()
@@ -52,7 +49,7 @@ void Patching::ApplyPatches()
 
 void Patching::UnapplyPatches()
 {
-	MH_Uninitialize();
-
 	MH_DisableHook(MH_ALL_HOOKS);
+
+	MH_Uninitialize();
 }

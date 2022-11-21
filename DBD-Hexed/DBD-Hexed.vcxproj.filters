@@ -25,14 +25,14 @@
     <Filter Include="Core\Modules">
       <UniqueIdentifier>{1def5b0a-7027-4c3d-a965-b7941099c12e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SDK">
-      <UniqueIdentifier>{c02b25e5-b810-4b7b-bc59-dc933b30778a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="imgui">
       <UniqueIdentifier>{721a3c9b-683c-48d4-937c-19f1c05116a7}</UniqueIdentifier>
     </Filter>
     <Filter Include="kiero">
       <UniqueIdentifier>{7d258bd5-c28a-4ef4-bc27-3fc83c0ac263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{ed747440-14cc-466e-878b-ad13777a366f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,9 +40,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Wrapper\Logger.hpp">
-      <Filter>Wrapper</Filter>
-    </ClInclude>
-    <ClInclude Include="Wrapper\Utils.hpp">
       <Filter>Wrapper</Filter>
     </ClInclude>
     <ClInclude Include="minhook\buffer.h">
@@ -77,9 +74,6 @@
     </ClInclude>
     <ClInclude Include="Core\Patching.hpp">
       <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="SDK\Engine.hpp">
-      <Filter>SDK</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imconfig.h">
       <Filter>imgui</Filter>
@@ -120,15 +114,21 @@
     <ClInclude Include="Core\Modules\ESP.hpp">
       <Filter>Core\Modules</Filter>
     </ClInclude>
+    <ClInclude Include="Wrapper\ClientConsole.hpp">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Engine.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Utils.hpp">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Wrapper\Logger.cpp">
-      <Filter>Wrapper</Filter>
-    </ClCompile>
-    <ClCompile Include="Wrapper\Utils.cpp">
       <Filter>Wrapper</Filter>
     </ClCompile>
     <ClCompile Include="minhook\buffer.c">
@@ -154,9 +154,6 @@
     </ClCompile>
     <ClCompile Include="Core\Patching.cpp">
       <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Engine.cpp">
-      <Filter>SDK</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui.cpp">
       <Filter>imgui</Filter>
@@ -187,6 +184,15 @@
     </ClCompile>
     <ClCompile Include="Core\Modules\ESP.cpp">
       <Filter>Core\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\ClientConsole.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Engine.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Utils.cpp">
+      <Filter>Wrapper</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

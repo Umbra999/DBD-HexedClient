@@ -6,7 +6,7 @@
 
 void Handler::InitModules()
 {
-	if (InternalSettings::CosmeticUnlocker) CosmeticUnlocker::EnableCosmetics();
+	if (InternalSettings::UnlockAll) CosmeticUnlocker::EnableCosmetics();
 }
 
 void Handler::OnRender(UGameViewportClient* UGameViewportClient, Canvas* canvas)

@@ -3,9 +3,13 @@
 #include "../imgui/imgui_impl_win32.h"
 #include "../imgui/imgui_impl_dx11.h"
 #include "../kiero/kiero.h"
+#include "InternalSettings.hpp"
+#include "Modules/CosmeticUnlocker.hpp"
+#include "../Wrapper/ClientConsole.hpp"
 
 bool GUI::IsInitialized = false;
 bool GUI::Enabled = false;
+HWND GUI::currentWindow = NULL;
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -15,12 +19,12 @@ ID3D11Device* GUI::pDevice = NULL;
 ID3D11DeviceContext* GUI::pContext = NULL;
 ID3D11RenderTargetView* GUI::mainRenderTargetView = NULL;
 
-void GUI::Create(HWND window)
+void GUI::Create()
 {
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
 	io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
-	ImGui_ImplWin32_Init(window);
+	ImGui_ImplWin32_Init(currentWindow);
 	ImGui_ImplDX11_Init(pDevice, pContext);
 
 	auto& style = ImGui::GetStyle();
@@ -89,6 +93,7 @@ void GUI::Render()
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
+	// MAIN WINDOW START
 	ImGui::Begin("H E X E D");
 
 	if (ImGui::CollapsingHeader("MOVEMENT"))
@@ -98,15 +103,50 @@ void GUI::Render()
 
 	if (ImGui::CollapsingHeader("ESP"))
 	{
-		
+		ImGui::Checkbox("Generator", &InternalSettings::GeneratorESP);
+		ImGui::Checkbox("Survivor", &InternalSettings::SurvivorESP);
+		ImGui::Checkbox("Killer", &InternalSettings::KillerESP);
+		ImGui::Checkbox("Gate", &InternalSettings::GatesESP);
+		ImGui::Checkbox("Hatch", &InternalSettings::HatchESP);
+		ImGui::Checkbox("Totem", &InternalSettings::TotemESP);
+		ImGui::Checkbox("Pallet", &InternalSettings::PalletESP);
+		ImGui::Checkbox("Chest", &InternalSettings::GatesESP);
 	}
 
 	if (ImGui::CollapsingHeader("MISC"))
 	{
-
+		if (ImGui::Checkbox("Unlock All", &InternalSettings::UnlockAll))
+		{
+			if (InternalSettings::UnlockAll) CosmeticUnlocker::EnableCosmetics();
+			else CosmeticUnlocker::DisableCosmetics();
+		}
 	}
 
 	ImGui::End();
+	// MAIN WINDOW END
+
+	// CONSOLE WINDOW START
+	ImGui::SetNextWindowSize(ImVec2(400, 300));
+	ImGui::SetNextWindowBgAlpha(0.25f);
+	bool* debug_open = (bool*)0;
+	if (ImGui::Begin("Debug", debug_open, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav))
+	{
+		ImGui::PushItemWidth(-FLT_MIN);
+		ImGui::BeginChild("scrollable", ImVec2(-FLT_MIN, FLT_MIN), false, ImGuiWindowFlags_AlwaysVerticalScrollbar);
+
+		std::vector<std::string> logs = ClientConsole::GetLogs();
+
+		int size = logs.size();
+		for (int i = size - 1; i >= 0; i--)
+		{
+			ImGui::TextWrapped(logs[i].c_str());
+		}
+
+		ImGui::EndChild();
+	}
+
+	ImGui::End();
+	// CONSOLE WINDOW END
 
 	ImGui::Render();
 
@@ -132,8 +172,9 @@ HRESULT __stdcall GUI::OnSwapChain(IDXGISwapChain* pSwapChain, UINT SyncInterval
 		pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
 		pDevice->CreateRenderTargetView(pBackBuffer, NULL, &mainRenderTargetView);
 		pBackBuffer->Release();
+		currentWindow = sd.OutputWindow;
 		oWndProc = (WNDPROC)SetWindowLongPtrW(sd.OutputWindow, GWLP_WNDPROC, (LONG_PTR)WndProc);
-		Create((HWND)sd.OutputWindow);
+		Create();
 	}
 	else if (Enabled) Render();
 
@@ -148,4 +189,15 @@ void GUI::KieroInit()
 	}
 
 	kiero::bind(8, (void**)&oPresent, OnSwapChain);
+}
+
+void GUI::Delete()
+{
+	Enabled = false;
+	IsInitialized = false;
+	kiero::shutdown();
+	ImGui_ImplDX11_Shutdown();
+	ImGui_ImplWin32_Shutdown();
+	ImGui::DestroyContext();
+	SetWindowLongPtrW(currentWindow, GWLP_WNDPROC, (LONG_PTR)oWndProc);
 }

@@ -98,13 +98,21 @@ UObject* AEscapeDoorClass;
 UObject* HookClass;
 UObject* ASearchableClass;
 UObject* ATotemClass;
+UObject* GetTotemStateFunc;
 UObject* AHatchClass;
+UObject* IsPulledDownFunc;
+UObject* IsBlockedPalletFunc;
+UObject* IsDreamPalletFunc;
+UObject* APalletClass;
+UObject* AWindowClass;
+UObject* ACollectableClass;
+UObject* UnbrokenFunc;
+UObject* ABreakableClass;
+
 
 
 uintptr_t GetBoneMatrixF;
 uintptr_t GetDebugCosmetics;
-
-void(*OPostRender)(UGameViewportClient* UGameViewportClient, Canvas* Canvas) = nullptr;
 
 bool APlayerController::ProjectWorldLocationToScreen(FVector& WorldLocation, FVector2D& ScreenLocation)
 {
@@ -125,6 +133,79 @@ bool APlayerController::ProjectWorldLocationToScreen(FVector& WorldLocation, FVe
 
 	return Parameters.ReturnValue;
 }
+
+bool APallet::GetIsPulledDown()
+{
+	struct {
+
+		bool ReturnValue;
+	} Parameters;
+
+	
+
+	ProcessEvent(IsPulledDownFunc, &Parameters);
+
+	
+
+	return Parameters.ReturnValue;
+}
+
+bool APallet::GetIsDreamPallet()
+{
+	struct {
+
+		bool ReturnValue;
+	} Parameters;
+
+
+
+	ProcessEvent(IsDreamPalletFunc, &Parameters);
+
+
+
+	return Parameters.ReturnValue;
+}
+
+bool APallet::IsPulldownBlockedByEntity()
+{
+
+	struct {
+
+		bool ReturnValue;
+	} Parameters;
+
+
+
+	ProcessEvent(IsBlockedPalletFunc, &Parameters);
+
+
+
+	return Parameters.ReturnValue;
+}
+
+int8_t ATotem::GetTotemState()
+{
+	struct {
+		int8_t ReturnValue;
+	} Parameters;
+
+	ProcessEvent(GetTotemStateFunc, &Parameters);
+
+	return Parameters.ReturnValue;
+}
+
+bool ABreakableBase::IsUnbroken()
+{
+	struct {
+		bool ReturnValue;
+	} Parameters;
+
+	ProcessEvent(UnbrokenFunc, &Parameters);
+
+	return Parameters.ReturnValue;
+}
+
+
 
 bool AController::LineOfSightTo(AActor* Other)
 {
@@ -299,6 +380,7 @@ bool EngineInit()
 	GetDebugCosmetics = reinterpret_cast<decltype(GetDebugCosmetics)>(Utils::FindPointer(main, debugCosmeticsSig, sizeof(debugCosmeticsSig), 0));
 	if (!GetDebugCosmetics) return false;
 
+
 	// Functions & Class Finding
 
 	WorldToScreenUFunc = ObjObjects->FindObject("Function Engine.PlayerController.ProjectWorldLocationToScreen");
@@ -331,9 +413,35 @@ bool EngineInit()
 
 	ASearchableClass = ObjObjects->FindObject("Class DeadByDaylight.Searchable");
 
+	
+	//Totem
 	ATotemClass = ObjObjects->FindObject("Class DeadByDaylight.Totem");
 
 	AHatchClass = ObjObjects->FindObject("Class DeadByDaylight.Hatch");
+
+	GetTotemStateFunc = ObjObjects->FindObject("Function DeadByDaylight.Totem.GetTotemState");
+
+
+	
+	//Pallet
+	APalletClass = ObjObjects->FindObject("Class DeadByDaylight.Pallet");
+
+	IsPulledDownFunc = ObjObjects->FindObject("Function DeadByDaylight.Pallet.GetIsPulledDown");
+
+	IsDreamPalletFunc = ObjObjects->FindObject("Function DeadByDaylight.Pallet.GetIsDreamPallet");
+
+	IsBlockedPalletFunc = ObjObjects->FindObject("Function DeadByDaylight.Pallet.IsPulldownBlockedByEntity");
+
+
+	//Breakable
+	ABreakableClass = ObjObjects->FindObject("Class DeadByDaylight.BreakableBase");
+
+	UnbrokenFunc = ObjObjects->FindObject("Function DeadByDaylight.BreakableBase.IsUnbroken");
+
+	AWindowClass = ObjObjects->FindObject("Class DeadByDaylight.Window");
+
+	ACollectableClass = ObjObjects->FindObject("Class DeadByDaylight.Collectable");
+
 
 	return true;
 }

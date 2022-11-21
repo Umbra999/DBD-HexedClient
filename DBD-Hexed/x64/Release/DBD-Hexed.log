@@ -1,6 +1,61 @@
-﻿  Code wird generiert.
-  0 of 1296 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+﻿  Patching.cpp
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(136,1): warning C4267: "=": Konvertierung von "size_t" nach "int32_t", Datenverlust möglich
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(226,14): warning C4099: "APawn": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(226): message : Siehe Deklaration von "APawn"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(230,19): warning C4099: "AController": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(209): message : Siehe Deklaration von "AController"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(254,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(254,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(260,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(260,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(266,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(266,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(272,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(272,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(281,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(281,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(289,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(289,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(299,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(299,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(305,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(305,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(313,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(313,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(331,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(331,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(350,16): warning C4099: "UPlayer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(350): message : Siehe Deklaration von "UPlayer"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(352,25): warning C4099: "APlayerController": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(217): message : Siehe Deklaration von "APlayerController"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(360,31): warning C4099: "USkeletalMeshComponent": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(232): message : Siehe Deklaration von "USkeletalMeshComponent"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(373,21): warning C4099: "APlayerState": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(373): message : Siehe Deklaration von "APlayerState"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(375,13): warning C4099: "APawn": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(226): message : Siehe Deklaration von "APawn"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(381,31): warning C4099: "USkeletalMeshComponent": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(381): message : Siehe Deklaration von "USkeletalMeshComponent"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(382,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(382,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(388,24): warning C4099: "USceneComponent": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(388): message : Siehe Deklaration von "USceneComponent"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(398,27): warning C4099: "APlayerState": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(373): message : Siehe Deklaration von "APlayerState"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(402,15): warning C4099: "UWorld": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(402): message : Siehe Deklaration von "UWorld"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(404,14): warning C4099: "ULevel": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(336): message : Siehe Deklaration von "ULevel"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(408,21): warning C4099: "UGameInstance": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(344): message : Siehe Deklaration von "UGameInstance"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(413,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(413,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(419,28): warning C4099: "UGameViewportClient": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(419): message : Siehe Deklaration von "UGameViewportClient"
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(420,7): warning C4200: Nicht dem Standard entsprechende Erweiterung: Null-Array in Struktur/Union
+C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\DBD-Hexed\SDK\Engine.hpp(420,7): message : Dieser Member wird vom Standardkonstruktor oder Zuweisungsoperator für Kopieren/Verschieben ignoriert.
+  Code wird generiert.
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 1373 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Codegenerierung ist abgeschlossen.
   DBD-Hexed.vcxproj -> C:\Users\Umbra\Documents\GitHub\DBD-HexedClient\x64\Release\DBD-Hexed.dll
